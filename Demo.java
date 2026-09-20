@@ -1,26 +1,13 @@
-public class Demo {
+public class Demo{ 
   public static void main (String[] args){
-  Student a = new Student();
-  a.name = "Ali";
-  Student b = a;
-  b.name = "Sara";
-  Student c = new Student();
-  c.name = a.name; 
+  Student currentStudent = new Student();
+  currentStudent = null;
   
-  System.out.println("Before: ");
-  System.out.println("Name a: " + a.name);
-  System.out.println("Name b: " + b.name);
-  System.out.println("Name c: " + c.name);
-  System.out.println(a==b);
-  System.out.println(b==c);
+  //null check
+  if(currentStudent == null){
+    System.out.println("No object created");}
 
-  b = new Student();
-  b.name = "Hira";
-
-  System.out.println("After: ");
-  System.out.println("Name a: " + a.name);
-  System.out.println("Name b: " + b.name);
-  System.out.println("Name c: " + c.name);
-
-  
-}}
+  else{
+    currentStudent.printSummary();}
+}
+}
